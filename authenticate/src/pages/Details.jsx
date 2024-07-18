@@ -14,7 +14,7 @@ function Details() {
 
     let fetchMovie = async () => {
       try{
-        let res = await fetch(`http://www.omdbapi.com/?i=${imdbID.imdbID}&apikey=c556ecbf`);
+        let res = await fetch(`https://www.omdbapi.com/?i=${imdbID.imdbID}&apikey=c556ecbf`);
         let data = await res.json();
         console.log(data);
         setMovie(data);
