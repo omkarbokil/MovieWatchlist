@@ -192,9 +192,18 @@ function Home() {
                     </div>
                     <hr className='my-2 border-[#023047]' />
                     <div>
-                      <p className='text-[12px] text-neutral-600 font-semibold'>Once selected, the content will get added to watchlist</p>
+                      {
+                        watchlist.length > 0 ? 
+                        <p className='text-[12px] text-neutral-600 font-semibold'>Once selected, the content will get added to watchlist</p>
+                        : ('')
+                      }
                       <div className='mt-3 grid gap-2'>
                         {
+                            watchlist.length === 0 ? 
+                            <div className='flex justify-center font-semibold text-[#023047]'>
+                              No Personal Watchlists found
+                            </div>
+                            :
                           watchlist.map((watchlist) => (
                             <div key={watchlist.id} className='py-2 px-4 rounded-md bg-black/30 text-white hover:bg-[#023047] hover:text-white cursor-pointer transition-all hover:scale-[1.03]' onClick={() => dispatch(addMovieToWatchlist({ watchlistID: watchlist.watchlistID, watchlistName : watchlist.text, movieID: movieID, movieTitle : movieTitle, movieYear : movieYear }))}>
                               <p className='capitalize text-sm font-bold'>{watchlist.text}</p>

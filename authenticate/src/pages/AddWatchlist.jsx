@@ -41,7 +41,7 @@ function AddWatchlist() {
           <div className='flex justify-center mt-3'>
                {
                     message ? 
-                    <div className='bg-white/30 px-5 py-2 rounded-md flex items-center gap-3 text-[#023047] font-semibold'>
+                    <div className='bg-black/20 px-5 py-2 rounded-lg flex items-center gap-3 text-[#023047] font-semibold'>
                          <span class="material-symbols-rounded">
                               task_alt
                          </span>

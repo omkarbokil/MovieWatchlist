@@ -52,6 +52,12 @@ function Watchlist() {
         <AddWatchlist/>
       </div>
       <div className='mt-10'>
+        {
+          watchlist.length === 0 ? 
+          <div className='flex justify-center font-semibold text-[#023047]'>
+            No Personal Watchlists found
+          </div>
+          :
         <div className='grid xl:grid-cols-3 md:grid-cols-2 gap-4 justify-center'>
           {
             watchlist.map((value) => (
@@ -81,6 +87,7 @@ function Watchlist() {
             ))
             }
         </div>
+        }
       </div>
 
       {
@@ -91,6 +98,11 @@ function Watchlist() {
                 <div>
                   <div className='mt-3 grid gap-2'>
                   {
+                      movies.length === 0 ? 
+                      <div className='flex justify-center font-semibold text-[#023047]'>
+                        No Movies in this Watchlist
+                      </div>
+                      :
                       movies.map((movie) => (
                         movie.watchlistID == watchlistID ?
                           <div className='flex gap-2 items-center'>
