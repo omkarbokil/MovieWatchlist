@@ -45,7 +45,7 @@ function Watchlist() {
     <main className='pt-10 lg:px-40 px-20 relative'>
       <div className='flex flex-col justify-center items-center gap-10'>
         <h1 className='font-bold sm:text-6xl text-3xl text-[#023047]'>
-          Watchlist
+          Personal Watchlists
         </h1>
       </div>
       <div>
