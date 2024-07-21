@@ -43,8 +43,8 @@ function Watchlist() {
 
   return (
     <main className='pt-10 lg:px-40 px-20 relative'>
-      <div className='flex flex-col justify-center items-center gap-10'>
-        <h1 className='font-bold sm:text-6xl text-3xl text-[#023047]'>
+      <div className='flex flex-col justify-center items-center gap-10 text-center'>
+        <h1 className='font-bold sm:text-5xl text-2xl text-[#023047]'>
           Personal Watchlists
         </h1>
       </div>
@@ -54,7 +54,7 @@ function Watchlist() {
       <div className='mt-10'>
         {
           watchlist.length === 0 ? 
-          <div className='flex justify-center font-semibold text-[#023047]'>
+          <div className='flex justify-center font-semibold text-[#023047] text-center'>
             No Personal Watchlists found
           </div>
           :

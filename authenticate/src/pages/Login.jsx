@@ -21,18 +21,18 @@ function Login() {
 
   return (
     <>
-     <section className='pt-10 lg:px-40 px-20 flex items-center h-screen'>
-          <div className='grid grid-cols-2 items-center gap-20'>
-               <div className='space-y-5'>
-                    <h1 className='text-9xl font-bold text-neutral-800'>Login to</h1>
-                    <h1 className='text-9xl font-bold text-[#023047]'>Movie Watchlist................</h1>
+     <section className='lg:px-40 px-20 flex items-center h-screen'>
+          <div className='grid md:grid-cols-2 items-center sm:gap-20 gap-10 justify-center'>
+               <div>
+                    <h1 className='lg:text-9xl sm:text-7xl text-4xl font-bold text-neutral-800'>Login to</h1>
+                    <h1 className='lg:text-9xl sm:text-7xl text-4xl font-bold text-[#023047]'>Movie Watchlist.</h1>
                </div>
                <div>
                     <form onSubmit={loginHandler}>
                          <div className='grid grid-cols-1 gap-5'>
                               <div>
                                    <label htmlFor="email" className='block font-bold'>Email <span className='text-red-600'>*</span> </label>
-                                   <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} className='w-full pb-1 placeholder-neutral-500 text-2xl border-b-2 bg-transparent border-neutral-600 mt-2 outline-none' placeholder='Enter Email' required />
+                                   <input type="email" name="email" id="email" onChange={(e) => setEmail(e.target.value)} className='w-full pb-1 placeholder-neutral-500 sm:text-2xl border-b-2 bg-transparent border-neutral-600 mt-2 outline-none' placeholder='Enter Email' required />
                               </div>
                               <button type='submit' className='bg-[#023047] py-2 w-full text-white font-bold rounded-lg'>
                                    {

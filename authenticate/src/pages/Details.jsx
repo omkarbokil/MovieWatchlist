@@ -47,7 +47,7 @@ function Details() {
 
   return (
     <>
-      <main className='bg-white'>
+      <main className='bg-white mb-20'>
         <div className=' pt-10 md:px-40 px-10'>
           {
               loading ?

@@ -33,8 +33,8 @@ function Account() {
           </svg>
         </div>
         <div>
-            <p className='text-2xl text-[#023047] mb-2'>Hello,</p>
-            <p className='text-3xl text-[#023047] font-bold'>{email}</p>
+            <p className='sm:text-2xl text-xl text-[#023047] mb-2'>Hello,</p>
+            <p className='sm:text-3xl text-xl text-[#023047] font-bold'>{email}</p>
         </div>
         <div>
           <button className='bg-black/30 text-white px-10 py-2 rounded-md font-bold hover:bg-red-600 hover:scale-[1.05] transition-all' onClick={logout}>
