@@ -1,10 +1,24 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 function Account() {
 
   const email = localStorage.getItem('email');
   const navigateLogin = useNavigate();
+  let navigate = useNavigate();
+
+  let [checkMail, setCheckMail] = useState(false)
+
+  useEffect(() => {
+    const email = localStorage.getItem('email');
+    if (email) {
+      setCheckMail(false);
+    } else {
+      setCheckMail(true);
+      navigate('/login');
+    }
+  }, [navigate]);
 
   const logout = () => {
     localStorage.removeItem('email');
@@ -23,7 +37,7 @@ function Account() {
             <p className='text-3xl text-[#023047] font-bold'>{email}</p>
         </div>
         <div>
-          <button className='bg-white/30 text-white px-10 py-2 rounded-md font-bold hover:bg-red-600 hover:scale-[1.05] transition-all' onClick={logout}>
+          <button className='bg-black/30 text-white px-10 py-2 rounded-md font-bold hover:bg-red-600 hover:scale-[1.05] transition-all' onClick={logout}>
             Logout
           </button>
         </div>

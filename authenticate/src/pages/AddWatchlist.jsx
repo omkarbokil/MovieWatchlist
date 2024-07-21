@@ -14,7 +14,7 @@ function AddWatchlist() {
           dispatch(addWatchlist(input))
           setInput('')
           setMessage(true);
-          
+
           setTimeout(() => {
                setMessage(false)
           }, 5000);
@@ -24,9 +24,9 @@ function AddWatchlist() {
   return (
     <section className='mt-5'>
           <div className='flex justify-center'>
-               <form onSubmit={addWatchlistHandler} className='border p-4 bg-white rounded-lg relative flex items-center gap-3'>
+               <form onSubmit={addWatchlistHandler} className='border p-4 bg-white rounded-lg relative flex sm:flex-row flex-col items-center gap-3'>
                     <div className='md:w-[40rem] sm:w-[20rem]'>
-                         <input type="text" id="watchlistName" className='border outline-none border-[#023047] text-sm px-3 rounded-md py-1.5 w-full' placeholder='Enter Watchlist Name' required value={input} onChange={(e) => setInput(e.target.value)} />
+                         <input type="text" id="watchlistName" className='border capitalize outline-none border-[#023047] text-sm px-3 rounded-md py-1.5 w-full' placeholder='Enter Watchlist Name' required value={input} onChange={(e) => setInput(e.target.value)} />
                     </div>
 
                     <div className='text-center'>

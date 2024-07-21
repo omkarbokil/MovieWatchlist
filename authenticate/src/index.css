@@ -5,9 +5,11 @@
 
 
 body{
-     background-image: linear-gradient(to bottom, white, #023047);
+     /* background-image: linear-gradient(to bottom, white, #023047); */
+     background-color: white;
      background-repeat: no-repeat;
      background-size: cover;
-     height:120vh;
+     /* height:120vh; */
      font-family: 'Manrope';
+     overflow-x: hidden;
 }
