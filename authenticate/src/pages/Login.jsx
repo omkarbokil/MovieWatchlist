@@ -14,42 +14,8 @@ function Login() {
           e.preventDefault();
           setLoading(true);
 
-          let mailData = {
-               mail : email
-          }
-          
-          const URL = 'https://movie-watchlist-553ec-default-rtdb.firebaseio.com/movie-watchlist.json';
-
-          try{
-               const response = await fetch(URL);
-               const data = await response.json();
-
-               if(data !== null){
-                    existingEmails = Object.values(data).map(entry => entry.mail);
-               }
-
-               if(data !== null && existingEmails.includes(email)){
-                    localStorage.setItem('email', email);
-                    homeNavigate("/");
-               }else{
-                    const postResponse = await fetch(URL, {
-                         method: 'POST',
-                         headers: {
-                           'Content-Type': 'application/json'
-                         },
-                         body: JSON.stringify(mailData)
-                    }).then((response) => {
-                         localStorage.setItem('email', email);
-                         homeNavigate("/");
-                    }).catch((error) => {
-                         console.log('Failed to Post Data - ', error);
-                    })
-               }
-          }catch(error) {
-               console.log('Failed to Post Data - ', error);
-          }finally{
-               setLoading(false)
-          }
+          localStorage.setItem('email', email);
+          homeNavigate("/");
      }
 
 
